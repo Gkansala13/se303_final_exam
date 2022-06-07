@@ -4,9 +4,7 @@
 #       write.
 
 def word_count(beginning, middle, conclusion)
-  beginning.split.size +
-  middle.split.size +
-  conclusion.split.size
+  beginning.split_size + middle.split_size + conclusion.split_size
 end
 
 def letter_count(beginning, middle, conclusion)
@@ -14,7 +12,14 @@ def letter_count(beginning, middle, conclusion)
 end
 
 def period_count(beginning, middle, conclusion)
-  beginning.scan(/\./).size +
-  middle.scan(/\./).size +
-  conclusion.scan(/\./).size
+  beginning.scan_size + middle.scan_size + conclusion.scan_size
+end
+
+public 
+def split_size
+  split.size
+end
+
+def scan_size
+  scan(/\./).size
 end
